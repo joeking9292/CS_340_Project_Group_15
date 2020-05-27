@@ -1,0 +1,157 @@
+body{
+  margin: 0;
+  font-family: 'Belleza', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/* ==== Header css ====*/
+
+header{
+  display: flex;
+  background-color: #dededf;
+}
+a{
+ color:#f67811 ;
+ text-decoration: none;
+
+}
+a:hover{
+  text-decoration: underline;
+
+}
+
+.site-title{
+  font-size: 35px;
+  padding-left: 32px;
+  margin: 0;
+}
+
+.site-title > a {
+  font-size: 28px;
+  text-decoration: none;
+  color: #44211a;
+}
+
+.site-title > a > p{
+  font-size: 22px;
+  padding-left: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+
+.site-links{
+  font-size: 22px;
+  margin: auto;
+  order: 2;
+  margin-right: 30px;
+}
+
+.site-links > a {
+  padding: 20px;
+  color: #44211a;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.site-links > a:hover {
+  background-color: #f67811;
+  color: black;
+}
+
+
+/* ==== Section Styles ====*/
+
+.main-header {
+  font-size: 40px;
+  margin: 20px 0px;
+  text-align:center;
+  color: #f67811;
+}
+
+#food-checkbox{
+    display: flex;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0px 0% 0% 0px;
+    border: solid;
+    border-width: 3px;
+    border-color: #f67811;
+    border-radius: 5px;
+}
+
+.filter-input-container{
+    flex-grow: 1;
+}
+
+.filter-input-container:nth-child(odd){
+  background-color: #dededf;
+}
+
+legend {
+    font-size: 25px;
+    color: #f67811;
+    padding-left: 5px;
+
+}
+
+/* ==== Button Styles ==== */
+#generate-recipes{
+  margin-left: 34%;
+  margin-top: 2%;
+  width: 20%;
+  font-size: 25px;
+  color: white;
+  padding: 15px;
+  background-color: #f67811;
+  border: 2px solid #ababab;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+}
+
+
+#generate-recipes:hover{
+    background-color:#f1f1f1;
+    border-color: #fff;
+    color:000;
+    border: 2px solid #ababab
+}
+
+
+/* ==== Recipe Card Photoes ==== */
+
+#recipe-section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe{
+  height: 400px;
+  width: 400px;
+  margin: 10px;
+  list-style-type: none;
+}
+
+.recipe-title{
+  color: #f67811;
+}
+
+.recipe-image-container > img {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.recipe-ingredients-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe-ingredients-container > li {
+  flex-basis: 35%;
+  font-size: 18px;
+}
