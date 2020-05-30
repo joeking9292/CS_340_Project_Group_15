@@ -5,12 +5,11 @@
    <meta charset="utf-8">
    <title>Can and Pantry, A virtual cookbook</title>
    <link href="https://fonts.googleapis.com/css?family=Belleza&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="public/styles.css">
+   <link rel="stylesheet" href="../public/styles.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.runtime.js" charset="utf-8" defer></script>
    <script src="/checkboxTemplate.js" charset="utf-8" defer></script>
    <script src="/recipeTemplate.js" charset="utf-8" defer></script>
    <script src="/index.js" charset="utf-8" defer></script>
-
 </head>
 <body>
    <header>
@@ -25,24 +24,22 @@
       </div>
     </header>
 <main class="content">
-    <h1 class="main-header"> My user-profile </h1>
-
-    <section class="user-profile">
-        <div class="user-bio">
-            <header>My Bio</header>
-            <p>Bio goes here</p>
+   <h1 class="main-header"> Food Groups </h1>
+   <section id="food-checkbox">
+        <div class="filter-input-container">
+           <form id="category" name="form" method="post" action="CheckBox.jsp">
+              <div>
+                 <legend>category</legend>
+                 <div>
+                    <input type="checkbox" value="ingredient">
+                    <label for="filter-condition-good">ingredient</label>
+                 </div>
+              </div>
+           </form>
         </div>
+    </section>
 
-        <div class="user-favorites">
-            <header>My Favorite Recipes</header>
-            <p>Favorites goes here</p>
-        </div>
-
-        <div class="user-recipes">
-            <header>My Recipes</header>
-            <p>User reipes goes here</p>
-        </div>
-   </section>
+    <button type="button" id="generate-recipes">Get Recipes!</button>
 
     <section id="recipe-section">
 

@@ -5,11 +5,12 @@
    <meta charset="utf-8">
    <title>Can and Pantry, A virtual cookbook</title>
    <link href="https://fonts.googleapis.com/css?family=Belleza&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="public/styles.css">
+   <link rel="stylesheet" href="../public/styles.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.runtime.js" charset="utf-8" defer></script>
    <script src="/checkboxTemplate.js" charset="utf-8" defer></script>
    <script src="/recipeTemplate.js" charset="utf-8" defer></script>
    <script src="/index.js" charset="utf-8" defer></script>
+
 </head>
 <body>
    <header>
@@ -23,22 +24,35 @@
           <input placeholder="Search:">
       </div>
     </header>
+<main class="content">
+    <h1 class="main-header"> My user-profile </h1>
 
-    <main class="content">
-      <h1 class="main-header"> Login </h1>
+    <section class="user-profile">
+        <div class="user-bio">
+            <header>My Bio</header>
+            <p>Bio goes here</p>
+        </div>
 
-      <div class="username-password">
-         <div class="username">
-            <input class="username-input" placeholder="Username" required>
-         </div>
+        <div class="user-favorites">
+            <header>My Favorite Recipes</header>
+            <p>Favorites goes here</p>
+        </div>
 
-         <div class="password">
-            <input class="password-input" placeholder="Password" required>
-         </div>
-         <div class="login-buttons">
-            <button type="button" class="submit-button">Submit</button>
-            <button type="button" class="cancel-button">Cancel</button>
-         </div>
-      </div>
-    </main>
+        <div class="user-recipes">
+            <header>My Recipes</header>
+            <p>User reipes goes here</p>
+        </div>
+   </section>
+
+    <section id="recipe-section">
+
+    </section>
+
+</main>
+
+
 </body>
+
+
+
+</html>

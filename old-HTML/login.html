@@ -5,7 +5,7 @@
    <meta charset="utf-8">
    <title>Can and Pantry, A virtual cookbook</title>
    <link href="https://fonts.googleapis.com/css?family=Belleza&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="public/styles.css">
+   <link rel="stylesheet" href="../public/styles.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.runtime.js" charset="utf-8" defer></script>
    <script src="/checkboxTemplate.js" charset="utf-8" defer></script>
    <script src="/recipeTemplate.js" charset="utf-8" defer></script>
@@ -23,33 +23,22 @@
           <input placeholder="Search:">
       </div>
     </header>
-<main class="content">
-   <h1 class="main-header"> Food Groups </h1>
-   <section id="food-checkbox">
-        <div class="filter-input-container">
-           <form id="category" name="form" method="post" action="CheckBox.jsp">
-              <div>
-                 <legend>category</legend>
-                 <div>
-                    <input type="checkbox" value="ingredient">
-                    <label for="filter-condition-good">ingredient</label>
-                 </div>
-              </div>
-           </form>
-        </div>
-    </section>
 
-    <button type="button" id="generate-recipes">Get Recipes!</button>
+    <main class="content">
+      <h1 class="main-header"> Login </h1>
 
-    <section id="recipe-section">
+      <div class="username-password">
+         <div class="username">
+            <input class="username-input" placeholder="Username" required>
+         </div>
 
-    </section>
-
-</main>
-
-
+         <div class="password">
+            <input class="password-input" placeholder="Password" required>
+         </div>
+         <div class="login-buttons">
+            <button type="button" class="submit-button">Submit</button>
+            <button type="button" class="cancel-button">Cancel</button>
+         </div>
+      </div>
+    </main>
 </body>
-
-
-
-</html>
