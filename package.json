@@ -1,0 +1,28 @@
+{
+  "name": "cs340final",
+  "version": "1.0.0",
+  "description": "recipe generating web application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browserify server.js",
+    "run": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeking9292/CS_340_Project_Group_15.git"
+  },
+  "author": "Mathew, Matthew, Steven, Joseph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joeking9292/CS_340_Project_Group_15/issues"
+  },
+  "homepage": "https://github.com/joeking9292/CS_340_Project_Group_15",
+  "dependencies": {
+    "browserify": "^16.5.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "handlebars": "^4.7.6",
+    "nodemon": "^2.0.4"
+  }
+}
