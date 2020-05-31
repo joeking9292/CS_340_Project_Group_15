@@ -1,0 +1,33 @@
+<main class="content">
+    <h1 class="main-header">Recipes</h1>
+    <section id="recipe-section">
+    {{#each recipe}}
+    <div class="recipe" data-name="{{name}}">
+        <h1 class="recipe-title"><a href="{{recipeURL}}" target="_blank">{{name}}</a></h1>
+            <div class="recipe-contents">
+                <div class="recipe-image-container">
+                    <img src="{{photoURL}}" alt="hamburger">
+                </div>
+                <div class="recipe-ingredients-container">
+                    {{#each ingredients}}
+                        <li data-ingredient="{{id}}">{{name}}</li>
+                    {{/each}}
+                </div>
+            </div>
+    </div>
+    {{/each}}
+    <form id="addrecipe" action="/recipe" method="post">
+    Recipe Name: <input type="text" name="name"><br>
+    description: <input type="text" name="description"><br>
+    Ingredients: <select name="Ingredients">
+        {{#each ingredients}}
+        <option value="{{id}}">{{name}}</option>
+        {{/each}}
+    </select><br>
+    Rating: <input type="number" name="Rating"><br>
+    <input type="submit" value="Submit">
+    </form>
+    </section>
+
+
+</main>
