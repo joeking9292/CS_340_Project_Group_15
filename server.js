@@ -27,24 +27,6 @@ app.get('/recipes', function(req, res, next){
 
 });
 
-
-
-
-// sends index with categoryData to the body of main.
-app.get('/index.html', function(req, res, next){
-  console.log(req.url, 'success')
-  res.render('index', {
-    categoryData: categoryData
-  })
-});
-
-app.get('/', function(req, res, next){
-  console.log(req.url, 'success')
-  res.render('index', {
-    categoryData: categoryData
-  })
-});
-
 app.get('/recipes.html', function(req, res, next){
     console.log(req.url, 'success')
     res.render('recipe', {

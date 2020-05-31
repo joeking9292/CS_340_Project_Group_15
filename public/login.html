@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>Can and Pantry, A virtual cookbook</title>
+   <link href="https://fonts.googleapis.com/css?family=Belleza&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../public/styles.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.runtime.js" charset="utf-8" defer></script>
+   <script src="/checkboxTemplate.js" charset="utf-8" defer></script>
+   <script src="/recipeTemplate.js" charset="utf-8" defer></script>
+   <script src="/index.js" charset="utf-8" defer></script>
+</head>
+<body>
+   <header>
+      <h1 class="site-title"><a href="index.html">Can and Pantry,<p>A Virtual Cookbook</p></a></h1>
+      <div class="site-links">
+         <a id= "create-recipes-link" href="index.html">Home</a>
+         <a id= "recipes-link" href="recipes.html">Recipes</a>
+         <a id= "login-link" href="login.html">Login</a>
+      </div>
+      <div class="search-bar">
+          <input placeholder="Search:">
+      </div>
+    </header>
+
+    <main class="content">
+      <h1 class="main-header"> Login </h1>
+
+      <div class="username-password">
+         <div class="username">
+            <input class="username-input" placeholder="Username" required>
+         </div>
+
+         <div class="password">
+            <input class="password-input" placeholder="Password" required>
+         </div>
+         <div class="login-buttons">
+            <button type="button" class="submit-button">Submit</button>
+            <button type="button" class="cancel-button">Cancel</button>
+         </div>
+      </div>
+    </main>
+</body>

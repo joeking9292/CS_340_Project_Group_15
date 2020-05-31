@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browserify server.js",
+    "start": "node server.js",
     "run": "nodemon server.js",
     "build": "handlebars views/partials/recipeTemplate.handlebars -f public/recipesCardTemplate.js",
     "prestart": "npm run build"
