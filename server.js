@@ -1,6 +1,8 @@
 var path = require('path');
 var express = require('express');
-var exphbs = require('express-handlebars');
+var mysql=require('./database.js');
+var bodyParser= require(;'body-parser.js');
+var exphbs = require('express-handlebars').create({defaultLayout:'main'});
 var app = express();
 var port = process.env.PORT || 3500;
 
@@ -8,9 +10,10 @@ var postData = require('./recipeData');
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
-
+app.use('/recipes',require('./recipes.js'));
 app.use(express.static('public'));
-
+app.use(bodyParser.urlencoded({extended:true}));
+app.set('mysql',mysql);
 app.get(['/', '/index.html'], function(req, res, next) {
     res.status(200).render('recipePage', {
         recipe: recipeData
