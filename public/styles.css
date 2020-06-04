@@ -239,3 +239,37 @@ legend {
   height: 50%;
   width: 50%;
 }
+
+/* ==== Profile page ==== */
+
+.user-profile {
+  position: absolute;
+  border: 5px solid black;
+  margin: 20px;
+  padding: 10px;
+  display: flexbox;
+  top: 200px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: auto;
+}
+
+.user-bio {
+  border: 1px solid black;
+  flex: 1 1 auto;
+  top: 0px;
+  left: 0px;
+}
+
+.user-favorites {
+  border: 1px solid black;
+  flex: 1 1 auto;
+  top:0px;
+  right:0px;
+}
+
+.user-recipes {
+  border: 1px solid black;
+  flex: 1 1 auto;
+}
