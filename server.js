@@ -1,4 +1,3 @@
-//Express server generating templates.
 var path = require('path');
 var express = require('express');
 var badyParser = require('body-parser');
