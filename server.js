@@ -4,15 +4,14 @@ var badyParser = require('body-parser');
 var app = express();
 var handlebars = require('express-handlebars');
 app.engine("handlebars", handlebars({ defaultLayout: 'main' }));
-var port = process.env.PORT || 3000;
-//var categoryData = require('./categoryData');
-var recipeData = require('./recipeData.json');
-var fs = require('fs');
-
 app.set('view engine', 'handlebars');
-
 //serve css and client.js
 app.use(express.static('public'));
+
+var port = process.env.PORT || 3000;
+var fs = require('fs');
+
+
 
 /////////////// MySQL Login /////////////////////
 var mySQL = require('mysql');
@@ -32,6 +31,8 @@ connection.connect(function(err) {
   console.log('connected as id: ' + connection.threadID);
   console.log(" ---- Connected to MySql Database ----");
 });
+
+////////////////// Rendering Pages ////////////////////
 
 app.get('/index.html', function (req, res, next) {
   res.status(200).render("profilePage", {});
@@ -60,6 +61,8 @@ app.get('*', function(req, res) {
   res.status(404).render('404', {});
 });
 
+
+//////////// App listen on port ////////////////
 
 app.listen(port, function() {
     console.log('App listening on port: ' + port);
