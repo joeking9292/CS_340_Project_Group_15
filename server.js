@@ -6,7 +6,7 @@ var handlebars = require('express-handlebars');
 app.engine("handlebars", handlebars({ defaultLayout: 'main' }));
 var port = process.env.PORT || 3000;
 //var categoryData = require('./categoryData');
-var recipeData = require('./recipeData');
+var recipeData = require('./recipeData.json');
 var fs = require('fs');
 
 app.set('view engine', 'handlebars');
@@ -33,9 +33,12 @@ connection.connect(function(err) {
   console.log(" ---- Connected to MySql Database ----");
 });
 
+app.get('/index.html', function (req, res, next) {
+  res.status(200).render("profilePage", {});
+})
 
-app.get(['/', '/index.html'], function(req, res, next) {
-    res.status(202).render('recipePage', {
+app.get(['/recipes.html'], function(req, res, next) {
+    res.status(200).render('recipePage', {
       recipes : recipeData
     })
 });
@@ -48,6 +51,10 @@ app.get('/recipe/:number', function (req, res, next) {
       res.status(200).render('partials/recipeTemplate', postData[number]);
   }
 });
+
+app.get('/login.html', function (req, res, next) {
+  res.status(200).render("loginPage", {});
+})
 
 app.get('*', function(req, res) {
   res.status(404).render('404', {});
