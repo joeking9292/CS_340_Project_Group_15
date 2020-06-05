@@ -70,6 +70,9 @@ a:hover{
   left: 0px;
   width: 100%;
   height: 30px;
+  overflow: hidden;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
 }
 
 .search-bar input {
@@ -78,7 +81,6 @@ a:hover{
   background-color: #dededf;
   padding-left: 10px;
 }
-
 
 /* ==== Section Styles ====*/
 
@@ -113,7 +115,6 @@ legend {
     font-size: 25px;
     color: #f67811;
     padding-left: 5px;
-
 }
 
 /* ==== Button Styles ==== */
@@ -131,7 +132,6 @@ legend {
 
 
 }
-
 
 #generate-recipes:hover{
     background-color:#f1f1f1;
@@ -245,10 +245,10 @@ legend {
 .user-profile {
   position: absolute;
   border: 5px solid black;
-  margin: 20px;
+  margin: 25px;
   padding: 10px;
   display: flexbox;
-  top: 200px;
+  top: 180px;
   left: 0px;
   right: 0px;
   bottom: 0px;
@@ -272,4 +272,174 @@ legend {
 .user-recipes {
   border: 1px solid black;
   flex: 1 1 auto;
+}
+
+/* ==== Modal ==== */
+
+#add-recipe-button {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 10px;
+  background-color: #f67811;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  color: white;
+  font-family: 'Belleza', sans-serif;
+  font-size: 20px;
+  outline: none;
+}
+
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#modal-backdrop-name {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#add-plant-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
+#rename-plant-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  width: auto;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.modal-header {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 28px;
+}
+
+#modal-close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-element {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.modal-element>label {
+  font-weight: 600;
+  flex: 1 75px;
+  margin-right: 10px;
+}
+
+.modal-element input {
+  flex: 6 200px;
+  padding: 8px;
+  font-size: 20px;
+  border: 1px solid grey;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 20px 10px;
+}
+
+#modal-cancel, #modal-accept, #modal-name-cancel, #modal-name-accept {
+  margin-right: 20px;
+}
+
+#modal-accept, #modal-name-accept {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  height: 50px;
+  width: 30%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #96C1AE;
+  color: #7E497F;
+  font-size: 15px;
+  border: 2px solid #96C1AE;
+}
+
+#modal-accept:hover, #modal-name-accept:hover {
+  background-color: white;
+  color: #7E497F;
+}
+
+#modal-cancel, #modal-name-cancel {
+  color: #333;
+  background-color: #E6E6C4;
+  width: 15%;
+  height: 50px;
+}
+
+#modal-cancel:hover {
+  background-color: #eee;
+}
+
+.modal-plant-name {
+  width: auto;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 100px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.hidden-name-modal {
+  display: none;
 }
