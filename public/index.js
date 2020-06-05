@@ -1,8 +1,26 @@
 
 var addRecipeButton = document.getElementById('add-recipe-button');
 
+function addRecipe () {
+  document.getElementById('modal-backdrop').classList.toggle('hidden'); //unhide backdrop
+  document.getElementById('add-recipe-modal').classList.toggle('hidden'); //unhide modal
+}
+
+function closeModal() {
+  document.getElementById('modal-backdrop').classList.toggle('hidden'); //hide backdrop
+  document.getElementById('add-recipe-modal').classList.toggle('hidden'); //hide modal
+
+  // reset inputs
+  document.getElementById('recipe-name-input').value = '';
+  document.getElementById('recipe-photo-input').value = '';
+  document.getElementById('recipe-about-input').value = '';
+}
+
 window.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('add-recipe-button').addEventListener
+    document.getElementById('add-recipe-button').addEventListener('click', addRecipe);
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+    document.getElementById('modal-cancel').addEventListener('click', closeModal);
+    document.getElementById('modal-name-cancel').addEventListener('click', closeModal);
 });
 
 
