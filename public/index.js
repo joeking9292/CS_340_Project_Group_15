@@ -1,6 +1,3 @@
-
-var addRecipeButton = document.getElementById('add-recipe-button');
-
 function addRecipe () {
   document.getElementById('modal-backdrop').classList.toggle('hidden'); //unhide backdrop
   document.getElementById('add-recipe-modal').classList.toggle('hidden'); //unhide modal
