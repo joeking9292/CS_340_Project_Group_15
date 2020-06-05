@@ -311,7 +311,7 @@ legend {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-#add-plant-modal {
+#add-recipe-modal {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -321,7 +321,7 @@ legend {
   overflow: scroll;
 }
 
-#rename-plant-modal {
+#rename-recipe-modal {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -430,7 +430,7 @@ legend {
   background-color: #eee;
 }
 
-.modal-plant-name {
+.modal-recipe-name {
   width: auto;
   max-width: 600px;
   min-width: 350px;
