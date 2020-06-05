@@ -18,9 +18,9 @@ var mySQL = require('mysql');
 var connection  = mySQL.createConnection({
   	connectionLimit : 10,
 	  host		  : 'classmysql.engr.oregonstate.edu',
-	  user		  : 'cs340_peterkom',
-	  password	: '0179',
-	  database	: 'cs340_peterkom'
+	  user		  : 'cs340_noonanj',
+	  password	: 'Trail92Smart92',
+	  database	: 'cs340_noonanj'
 });
 
 connection.connect(function(err) {
