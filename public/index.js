@@ -1,10 +1,14 @@
-/*
-Index.js
-Tasks:
-when Get Recipes! button is clicked needs to filter available recipes and post them to the DOM.
 
-*/
+var addRecipeButton = document.getElementById('add-recipe-button');
 
+window.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('add-recipe-button').addEventListener
+});
+
+
+
+/* OLD index.js FROM PREVIOUS PROJECT */
+/* NOT INTENTED FOR USE IN PROJECT ATM 
 
 function getRecipes(){
   var xhttp = new XMLHttpRequest();
@@ -152,7 +156,4 @@ window.addEventListener('DOMContentLoaded', function(){
 });
 
 
-
-
-
-//
+*/
