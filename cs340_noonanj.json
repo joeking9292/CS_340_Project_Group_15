@@ -1,0 +1,31 @@
+[
+{"type":"header","version":"4.9.4","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cs340_noonanj"},
+{"type":"table","name":"contain","database":"cs340_noonanj","data":
+[
+
+]
+}
+,{"type":"table","name":"ingredients","database":"cs340_noonanj","data":
+[
+{"ingredient_id":"122","name":"flour","measuring_units":"cups","food_group_tag":"essential"},
+{"ingredient_id":"123","name":"salt","measuring_units":"cups","food_group_tag":"essential"}
+]
+}
+,{"type":"table","name":"recipes","database":"cs340_noonanj","data":
+[
+{"recipe_id":"32","name":"Cookies","author":"Matthew","rating":"4","text":"These are the best chocolate chip cookies around!","user_id":"1"}
+]
+}
+,{"type":"table","name":"reviews","database":"cs340_noonanj","data":
+[
+
+]
+}
+,{"type":"table","name":"user","database":"cs340_noonanj","data":
+[
+{"user_id":"1","password":"password","name":"Matthew","birth_date":"0000-00-00"},
+{"user_id":"2","password":"password1","name":"Steve","birth_date":"0000-00-00"}
+]
+}
+]

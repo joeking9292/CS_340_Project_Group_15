@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browserify server.js",
-    "run": "nodemon server.js"
+    "start": "node server.js",
+    "run": "nodemon server.js",
+    "build": "handlebars views/partials/recipeTemplate.handlebars -f public/recipesCardTemplate.js",
+    "prestart": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,10 +21,12 @@
   },
   "homepage": "https://github.com/joeking9292/CS_340_Project_Group_15",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "browserify": "^16.5.1",
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
     "handlebars": "^4.7.6",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.4"
   }
 }
