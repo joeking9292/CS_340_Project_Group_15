@@ -144,6 +144,7 @@ legend {
 /* ==== Recipe Card Photoes ==== */
 
 #recipe-section{
+  margin: 10px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -201,6 +202,16 @@ legend {
   border-radius: 5px;
   padding-left: 10px;
 }
+
+.birth-date-input {
+  height: 30px;
+  width: 50%;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
 
 .submit-button {
   background-color: #f67811;
@@ -260,6 +271,8 @@ legend {
   flex: 1 1 auto;
   top: 0px;
   left: 0px;
+  padding: 10px;
+  overflow: scroll;
 }
 
 .user-favorites {
@@ -267,11 +280,15 @@ legend {
   flex: 1 1 auto;
   top:0px;
   right:0px;
+  padding: 10px;
+  overflow: scroll;
 }
 
 .user-recipes {
   border: 1px solid black;
   flex: 1 1 auto;
+  padding: 10px;
+  overflow: scroll;
 }
 
 /* ==== Modal ==== */

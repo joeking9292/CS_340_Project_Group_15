@@ -12,15 +12,14 @@ var port = process.env.PORT || 3000;
 var fs = require('fs');
 
 
-
 /////////////// MySQL Login /////////////////////
 var mySQL = require('mysql');
 var connection  = mySQL.createConnection({
   	connectionLimit : 10,
 	  host		  : 'classmysql.engr.oregonstate.edu',
-	  user		  : 'cs340_noonanj',
-	  password	: 'Trail92Smart92',
-	  database	: 'cs340_noonanj'
+	  user		  : 'cs340_peterkom',
+	  password	: '0179',
+	  database	: 'cs340_peterkom'
 });
 
 connection.connect(function(err) {
@@ -34,14 +33,25 @@ connection.connect(function(err) {
 
 ////////////////// Rendering Pages ////////////////////
 
-app.get('/index.html', function (req, res, next) {
+app.get(['/', '/index.html'], function (req, res, next) {
   res.status(200).render("profilePage", {});
-})
+});
 
 app.get(['/recipes.html'], function(req, res, next) {
+  console.log("Inside the Recipes Page. D A T A:");
+  var recipesSQL = "SELECT * from Recipes";
+  
+  connection.query(recipesSQL, function(error, results, fields) {
+    if (error) {
+      throw error;
+    }
+    console.log(results);
     res.status(200).render('recipePage', {
-      recipes : recipeData
-    })
+      recipes : results
+    });
+  });
+
+
 });
 
 app.get('/recipe/:number', function (req, res, next) {
@@ -55,7 +65,17 @@ app.get('/recipe/:number', function (req, res, next) {
 
 app.get('/login.html', function (req, res, next) {
   res.status(200).render("loginPage", {});
-})
+  /*
+  var loginSQL = "INSERT INTO user (user_id, password, name, birth_date)";
+  var inserts = [req.body.user_id, req.body.password, req.body.name, req.body.birth_date];
+  mySQL = mySQL.connection.query(loginSQL, inserts, function(error, results, fields){
+    if(error){
+        console.log(JSON.stringify(error))
+        res.write(JSON.stringify(error));
+        res.end();
+    }
+    */
+});
 
 app.get('*', function(req, res) {
   res.status(404).render('404', {});

@@ -4,17 +4,20 @@
     <section class="user-profile">
         <div class="user-bio">
             <h3>My Bio</h3>
-            <p>Bio goes here</p>
+            <p>{{this.userBio}}</p>
+            <p>Birthdate: {{this.birth_date}}</p>
+
         </div>
 
         <div class="user-favorites">
             <h3>My Favorite Recipes</h3>
-            <p>Favorites goes here</p>
+            <p>{{this.favoriteRecipes}}</p>
+            <img src="{{this.photoURL}}" alt="favorite recipe photo">
         </div>
 
         <div class="user-recipes">
             <h3>My Recipes</h3>
-            <p>User reipes goes here</p>
+            <p>{{this.userRecipes}}</p>
         </div>
     </section>
 
