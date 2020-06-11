@@ -1,14 +1,14 @@
 <main class="content">
-    <h1 class="main-header"> My Profile </h1>
-
+    <h1 class="main-header"> Different Users on this Site! </h1>
+    
     <section class="user-profile">
+        {{#each profile}}
         <div class="user-bio">
-            <h3>My Bio</h3>
-            <p>{{this.userBio}}</p>
-            <p>Birthdate: {{this.birth_date}}</p>
-
+            <h3>{{this.name}}</h3>
+            <p>Birthdate of {{this.name}}: {{this.birth_date}}</p>
         </div>
-
+        {{/each}}
+<!--
         <div class="user-favorites">
             <h3>My Favorite Recipes</h3>
             <p>{{this.favoriteRecipes}}</p>
@@ -19,6 +19,7 @@
             <h3>My Recipes</h3>
             <p>{{this.userRecipes}}</p>
         </div>
+-->
     </section>
 
     <button id="add-recipe-button">Add Recipe</button>
