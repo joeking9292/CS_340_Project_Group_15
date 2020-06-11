@@ -21,7 +21,32 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// get value of login
+var username = document.getElementsByClassName('username-input');
+var password = document.getElementsByClassName('password-input');
+var birthdate = document.getElementsByClassName('birth-date-input');
+var dataToSend = loginSubmit + " " + password + " " + birthdate;
 
+var loginSubmit = document.getElementsByClassName('submit-button');
+var cancel = document.getElementsByClassName('cancel-button');
+
+loginSubmit.addEventListener('click', function() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+      recipes = JSON.parse(xhttp.responseText);
+    }
+  };
+  xhttp.open("POST", "/insertUser", true);
+  xhttp.send(dataToSend);
+})
+
+
+cancel.addEventListener('click', function() {
+
+
+})
 /* OLD index.js FROM PREVIOUS PROJECT */
 /* NOT INTENTED FOR USE IN PROJECT ATM 
 
