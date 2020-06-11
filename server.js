@@ -75,16 +75,20 @@ app.get('/recipe/:number', function (req, res, next) {
 
 app.get('/login.html', function (req, res, next) {
   res.status(200).render("loginPage", {});
-  /*
-  var loginSQL = "INSERT INTO user (user_id, password, name, birth_date)";
-  var inserts = [req.body.user_id, req.body.password, req.body.name, req.body.birth_date];
-  mySQL = mySQL.connection.query(loginSQL, inserts, function(error, results, fields){
+});
+
+app.get('/insertUser', function (req, res, next) {
+  console.log(res);
+  console.log(req);
+  var loginSQL = "INSERT INTO User (name, password, birth_date)";
+  var inserts = [res.body.password, res.body.name, res.body.birth_date];
+  mySQL.connection.query(loginSQL, inserts, function(error, results, fields){
     if(error){
-        console.log(JSON.stringify(error))
+        console.log(JSON.stringify(error));
         res.write(JSON.stringify(error));
         res.end();
     }
-    */
+  });
 });
 
 app.get('*', function(req, res) {
