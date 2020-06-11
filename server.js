@@ -34,7 +34,18 @@ connection.connect(function(err) {
 ////////////////// Rendering Pages ////////////////////
 
 app.get(['/', '/index.html'], function (req, res, next) {
-  res.status(200).render("profilePage", {});
+  console.log("Inside the U Page. D A T A:");
+  var recipesSQL = "SELECT * from Users";
+  
+  connection.query(recipesSQL, function(error, results, fields) {
+    if (error) {
+      throw error;
+    }
+    console.log(results);
+    res.status(200).render('profilePage', {
+      profile : results
+    });
+  });
 });
 
 app.get(['/recipes.html'], function(req, res, next) {
@@ -50,10 +61,9 @@ app.get(['/recipes.html'], function(req, res, next) {
       recipes : results
     });
   });
-
-
 });
 
+/*
 app.get('/recipe/:number', function (req, res, next) {
   var number = req.params.number;
   if ((recipeData.length-1) < number) {
@@ -61,7 +71,7 @@ app.get('/recipe/:number', function (req, res, next) {
   } else {
       res.status(200).render('partials/recipeTemplate', postData[number]);
   }
-});
+});*/
 
 app.get('/login.html', function (req, res, next) {
   res.status(200).render("loginPage", {});
