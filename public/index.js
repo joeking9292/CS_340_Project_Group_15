@@ -1,12 +1,52 @@
+function addRecipe () {
+  document.getElementById('modal-backdrop').classList.toggle('hidden'); //unhide backdrop
+  document.getElementById('add-recipe-modal').classList.toggle('hidden'); //unhide modal
+}
 
-var addRecipeButton = document.getElementById('add-recipe-button');
+function closeModal() {
+  document.getElementById('modal-backdrop').classList.toggle('hidden'); //hide backdrop
+  document.getElementById('add-recipe-modal').classList.toggle('hidden'); //hide modal
+
+  // reset inputs
+  document.getElementById('recipe-name-input').value = '';
+  document.getElementById('recipe-photo-input').value = '';
+  document.getElementById('recipe-about-input').value = '';
+}
 
 window.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('add-recipe-button').addEventListener
+    document.getElementById('add-recipe-button').addEventListener('click', addRecipe);
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+    document.getElementById('modal-cancel').addEventListener('click', closeModal);
+    document.getElementById('modal-name-cancel').addEventListener('click', closeModal);
 });
 
 
+// get value of login
+var username = document.getElementsByClassName('username-input');
+var password = document.getElementsByClassName('password-input');
+var birthdate = document.getElementsByClassName('birth-date-input');
+var dataToSend = loginSubmit + " " + password + " " + birthdate;
 
+var loginSubmit = document.getElementsByClassName('submit-button');
+var cancel = document.getElementsByClassName('cancel-button');
+
+loginSubmit[0].addEventListener('click', function() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+      recipes = JSON.parse(xhttp.responseText);
+    }
+  };
+  xhttp.open("POST", "/insertUser", true);
+  xhttp.send(dataToSend);
+})
+
+
+cancel[0].addEventListener('click', function() {
+
+
+})
 /* OLD index.js FROM PREVIOUS PROJECT */
 /* NOT INTENTED FOR USE IN PROJECT ATM 
 
