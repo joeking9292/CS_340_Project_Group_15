@@ -30,7 +30,7 @@ var dataToSend = loginSubmit + " " + password + " " + birthdate;
 var loginSubmit = document.getElementsByClassName('submit-button');
 var cancel = document.getElementsByClassName('cancel-button');
 
-loginSubmit.addEventListener('click', function() {
+loginSubmit[0].addEventListener('click', function() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -43,7 +43,7 @@ loginSubmit.addEventListener('click', function() {
 })
 
 
-cancel.addEventListener('click', function() {
+cancel[0].addEventListener('click', function() {
 
 
 })
