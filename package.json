@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/joeking9292/CS_340_Project_Group_15",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "browserify": "^16.5.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-handlebars": "^4.0.4",
     "forever": "^3.0.0",
     "handlebars": "^4.7.6",
